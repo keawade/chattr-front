@@ -8,6 +8,24 @@ This is the frontend sockets and database solution for chattr. The backend solut
 - [Semantic UI](http://semantic-ui.com/)
 - [Socket.io](http://socket.io/)
 
+## Preview
+
+### Home / Login
+
+![image](./readme-img/chattr-home.PNG)
+
+### Register
+
+![image](./readme-img/chattr-register.PNG)
+
+### Chat List
+
+![image](./readme-img/chattr-chat.PNG)
+
+### Chat Rooms
+
+![image](./readme-img/chattr-room.PNG)
+
 ## Installation
 
 1. Run `npm install`.
