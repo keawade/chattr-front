@@ -1,0 +1,14 @@
+<div class='comment' *ngFor='let message of messages'>
+  <a class='avatar'>
+    <img src='/img/{{message.user}}.png'>
+  </a>
+  <div class='content'>
+    <span class='author'>{{message.user}}</span>
+    <div class='metadata'>
+      <span class='date'>{{message.date}}</span>
+    </div>
+    <div class='text'>
+      {{message.content}}
+    </div>
+  </div>
+</div>

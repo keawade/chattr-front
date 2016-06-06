@@ -1,0 +1,33 @@
+<div class='ui container segment' [ngClass]='{loading: isLoading}'>
+  <h1 class='ui header'>Register</h1>
+  <form class='ui form' [ngFormModel]='registerForm' (ngSubmit)='onSubmit()'>
+    <div class='field'>
+      <label>User Name</label>
+      <input [ngFormControl]='registerForm.controls["username"]' type='text' name='username' placeholder='User Name' autocomplete='off' #username='ngForm'>
+    </div>
+    <div class='field'>
+      <label>Email Address</label>
+        <input [ngFormControl]='registerForm.controls["email"]' type='email' name='email' placeholder='Email Address' autocomplete='off' #email='ngForm'>
+    </div>
+    <div class='field'>
+      <label>Password</label>
+      <input [ngFormControl]='registerForm.controls["password"]' type='password' name='password' placeholder='Password' autocomplete='off' #password='ngForm'>
+    </div>
+    <div class='field'>
+      <label>Confirm Password</label>
+        <input [ngFormControl]='registerForm.controls["confirmPassword"]' type='password' name='confirm-password' placeholder='Confirm Password' autocomplete='off' #confirmPassword='ngForm'>
+    </div>
+    <button class='ui primary button' type='submit' [disabled]='!username.valid || !email.valid || !password.valid || !confirmPassword.valid || password.value !== confirmPassword.value'>Submit</button>
+  </form>
+</div>
+<div class='ui container segment'>
+  <h1 class='ui header'>Form Requirements</h1>
+  <div class='list'>
+    <div class='item'>User name must be at least five characters long.</div>
+    <div class='item'>Must enter an email address.</div>
+    <div class='item'>Password must be at least eight characters long.</div>
+    <div class='item'>Password must include one lowercase letter.</div>
+    <div class='item'>Password must include one uppercase letter.</div>
+    <div class='item'>Password must include one number.</div>
+  </div>
+</div>

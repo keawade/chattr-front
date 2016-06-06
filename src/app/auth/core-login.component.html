@@ -1,0 +1,17 @@
+<form class='ui form' [ngFormModel]='loginForm' (ngSubmit)='onSubmit()'>
+  <div class='field'>
+    <label>Username</label>
+    <div class='ui left icon input'>
+      <input type='text' placeholder='Username' autocomplete='off' [ngFormControl]='loginForm.controls["username"]' #username='ngForm'>
+      <i class='user icon'></i>
+    </div>
+  </div>
+  <div class='field'>
+    <label>Password</label>
+    <div class='ui left icon input'>
+      <input type='password' autocomplete='off' [ngFormControl]='loginForm.controls["password"]' #password='ngForm'>
+      <i class='lock icon'></i>
+    </div>
+  </div>
+  <div class='ui blue submit button' type='submit' [ngClass]='{loading: isLoading}'>Login</div>
+</form>
